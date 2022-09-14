@@ -4,7 +4,7 @@ All URIs are relative to *https://www.lusid.com/insights*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAccessEvaluationLog**](AccessEvaluationsApi.md#getAccessEvaluationLog) | **GET** /api/access/{id} | [EXPERIMENTAL] GetAccessEvaluationLog: Get the log for a specific access evaluation.
+[**getAccessEvaluationLog**](AccessEvaluationsApi.md#getAccessEvaluationLog) | **GET** /api/access/{id} | [EXPERIMENTAL] GetAccessEvaluationLog: Get the log for a specific access evaluation.  This endpoint will be deprecated in the near future.
 [**listAccessEvaluationLogs**](AccessEvaluationsApi.md#listAccessEvaluationLogs) | **GET** /api/access | [EXPERIMENTAL] ListAccessEvaluationLogs: List the logs for access evaluations.
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 # **getAccessEvaluationLog**
 > AccessEvaluationLog getAccessEvaluationLog(id)
 
-[EXPERIMENTAL] GetAccessEvaluationLog: Get the log for a specific access evaluation.
+[EXPERIMENTAL] GetAccessEvaluationLog: Get the log for a specific access evaluation.  This endpoint will be deprecated in the near future.
 
 ### Example
 ```java

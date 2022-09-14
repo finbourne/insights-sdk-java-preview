@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.0.289",
+    "version": "0.0.358",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -60,7 +60,7 @@
             "description": "When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000.",
             "schema": {
               "maximum": 10000,
-              "minimum": 0,
+              "minimum": 1,
               "type": "integer",
               "description": "When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000.",
               "format": "int32"
@@ -157,7 +157,7 @@
         "tags": [
           "Access Evaluations"
         ],
-        "summary": "[EXPERIMENTAL] GetAccessEvaluationLog: Get the log for a specific access evaluation.",
+        "summary": "[EXPERIMENTAL] GetAccessEvaluationLog: Get the log for a specific access evaluation.\r\nThis endpoint will be deprecated in the near future.",
         "operationId": "GetAccessEvaluationLog",
         "parameters": [
           {
@@ -166,7 +166,7 @@
             "description": "The identifier of the access evaluation to obtain the log for.",
             "required": true,
             "schema": {
-              "maxLength": 64,
+              "maxLength": 70,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_:\\+]+$",
               "type": "string",
@@ -523,7 +523,7 @@
         "tags": [
           "Requests"
         ],
-        "summary": "[BETA] ListRequestLogs: Get the logs for API requests.",
+        "summary": "[EARLY ACCESS] ListRequestLogs: Get the logs for API requests.",
         "operationId": "ListRequestLogs",
         "parameters": [
           {
@@ -647,7 +647,7 @@
             "oauth2": [ ]
           }
         ],
-        "x-fbn-apistatus": "Beta"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     },
     "/api/requests/{id}": {
@@ -655,7 +655,7 @@
         "tags": [
           "Requests"
         ],
-        "summary": "[BETA] GetRequestLog: Get the log for a specific API request.",
+        "summary": "[EARLY ACCESS] GetRequestLog: Get the log for a specific API request.",
         "operationId": "GetRequestLog",
         "parameters": [
           {
@@ -729,7 +729,7 @@
             "oauth2": [ ]
           }
         ],
-        "x-fbn-apistatus": "Beta"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     },
     "/api/requests/{id}/request": {
@@ -737,7 +737,7 @@
         "tags": [
           "Requests"
         ],
-        "summary": "[BETA] GetRequest: Get the request content for a specific API request.",
+        "summary": "[EARLY ACCESS] GetRequest: Get the request content for a specific API request.",
         "operationId": "GetRequest",
         "parameters": [
           {
@@ -811,7 +811,7 @@
             "oauth2": [ ]
           }
         ],
-        "x-fbn-apistatus": "Beta"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     },
     "/api/requests/{id}/response": {
@@ -819,7 +819,7 @@
         "tags": [
           "Requests"
         ],
-        "summary": "[BETA] GetResponse: Get the response for a specific API request.",
+        "summary": "[EARLY ACCESS] GetResponse: Get the response for a specific API request.",
         "operationId": "GetResponse",
         "parameters": [
           {
@@ -893,7 +893,7 @@
             "oauth2": [ ]
           }
         ],
-        "x-fbn-apistatus": "Beta"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     },
     "/api/vendor": {

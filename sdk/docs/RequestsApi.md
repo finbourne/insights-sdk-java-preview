@@ -4,17 +4,17 @@ All URIs are relative to *https://www.lusid.com/insights*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getRequest**](RequestsApi.md#getRequest) | **GET** /api/requests/{id}/request | [BETA] GetRequest: Get the request content for a specific API request.
-[**getRequestLog**](RequestsApi.md#getRequestLog) | **GET** /api/requests/{id} | [BETA] GetRequestLog: Get the log for a specific API request.
-[**getResponse**](RequestsApi.md#getResponse) | **GET** /api/requests/{id}/response | [BETA] GetResponse: Get the response for a specific API request.
-[**listRequestLogs**](RequestsApi.md#listRequestLogs) | **GET** /api/requests | [BETA] ListRequestLogs: Get the logs for API requests.
+[**getRequest**](RequestsApi.md#getRequest) | **GET** /api/requests/{id}/request | [EARLY ACCESS] GetRequest: Get the request content for a specific API request.
+[**getRequestLog**](RequestsApi.md#getRequestLog) | **GET** /api/requests/{id} | [EARLY ACCESS] GetRequestLog: Get the log for a specific API request.
+[**getResponse**](RequestsApi.md#getResponse) | **GET** /api/requests/{id}/response | [EARLY ACCESS] GetResponse: Get the response for a specific API request.
+[**listRequestLogs**](RequestsApi.md#listRequestLogs) | **GET** /api/requests | [EARLY ACCESS] ListRequestLogs: Get the logs for API requests.
 
 
 <a name="getRequest"></a>
 # **getRequest**
 > Request getRequest(id)
 
-[BETA] GetRequest: Get the request content for a specific API request.
+[EARLY ACCESS] GetRequest: Get the request content for a specific API request.
 
 ### Example
 ```java
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 # **getRequestLog**
 > RequestLog getRequestLog(id)
 
-[BETA] GetRequestLog: Get the log for a specific API request.
+[EARLY ACCESS] GetRequestLog: Get the log for a specific API request.
 
 ### Example
 ```java
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 # **getResponse**
 > Response getResponse(id)
 
-[BETA] GetResponse: Get the response for a specific API request.
+[EARLY ACCESS] GetResponse: Get the response for a specific API request.
 
 ### Example
 ```java
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 # **listRequestLogs**
 > ResourceListWithHistogramOfRequestLog listRequestLogs(filter, sortBy, limit, page, histogramInterval)
 
-[BETA] ListRequestLogs: Get the logs for API requests.
+[EARLY ACCESS] ListRequestLogs: Get the logs for API requests.
 
 ### Example
 ```java

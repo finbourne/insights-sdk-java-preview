@@ -6,7 +6,7 @@ info:
     url: https://www.finbourne.com
   termsOfService: https://www.finbourne.com/legal/terms-conditions
   title: FINBOURNE Insights API
-  version: 0.0.289
+  version: 0.0.358
   x-logo:
     url: https://www.lusid.com/app/assets/logo_white.png
     backgroundColor: '#415464'
@@ -73,7 +73,7 @@ paths:
             value is 0 and the maximum is 10000.
           format: int32
           maximum: 10000
-          minimum: 0
+          minimum: 1
           type: integer
         style: form
         x-nullable: true
@@ -155,7 +155,7 @@ paths:
         required: true
         schema:
           description: The identifier of the access evaluation to obtain the log for.
-          maxLength: 64
+          maxLength: 70
           minLength: 1
           pattern: ^[a-zA-Z0-9\-_:\+]+$
           type: string
@@ -193,8 +193,8 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[EXPERIMENTAL] GetAccessEvaluationLog: Get the log for a specific
-        access evaluation.'
+      summary: "[EXPERIMENTAL] GetAccessEvaluationLog: Get the log for a specific\
+        \ access evaluation.\r\nThis endpoint will be deprecated in the near future."
       tags:
       - Access Evaluations
       x-fbn-apistatus: Experimental
@@ -515,10 +515,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] ListRequestLogs: Get the logs for API requests.'
+      summary: '[EARLY ACCESS] ListRequestLogs: Get the logs for API requests.'
       tags:
       - Requests
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
   /api/requests/{id}:
     get:
@@ -569,10 +569,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] GetRequestLog: Get the log for a specific API request.'
+      summary: '[EARLY ACCESS] GetRequestLog: Get the log for a specific API request.'
       tags:
       - Requests
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
   /api/requests/{id}/request:
     get:
@@ -623,10 +623,11 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] GetRequest: Get the request content for a specific API request.'
+      summary: '[EARLY ACCESS] GetRequest: Get the request content for a specific
+        API request.'
       tags:
       - Requests
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
   /api/requests/{id}/response:
     get:
@@ -677,10 +678,10 @@ paths:
           description: Error response
       security:
       - oauth2: []
-      summary: '[BETA] GetResponse: Get the response for a specific API request.'
+      summary: '[EARLY ACCESS] GetResponse: Get the response for a specific API request.'
       tags:
       - Requests
-      x-fbn-apistatus: Beta
+      x-fbn-apistatus: EarlyAccess
       x-accepts: application/json
   /api/vendor:
     get:

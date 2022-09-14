@@ -5,7 +5,7 @@
     <artifactId>insights-sdk-preview</artifactId>
     <packaging>jar</packaging>
     <name>insights-sdk-preview</name>
-    <version>0.0.289-SNAPSHOT</version>
+    <version>0.0.358-SNAPSHOT</version>
     <url>https://github.com/finbourne/insights-sdk-java-preview/</url>
     <description>Insights SDK Java Preview</description>
     <scm>
