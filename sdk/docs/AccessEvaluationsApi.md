@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 <a name="listAccessEvaluationLogs"></a>
 # **listAccessEvaluationLogs**
-> ResourceListWithHistogramOfAccessEvaluationLog listAccessEvaluationLogs(filter, sortBy, limit, page, histogramInterval)
+> ResourceListWithHistogramOfAccessEvaluationLog listAccessEvaluationLogs(startAt, endAt, filter, sortBy, limit, page, histogramInterval)
 
 [EXPERIMENTAL] ListAccessEvaluationLogs: List the logs for access evaluations.
 
@@ -101,13 +101,15 @@ public class Example {
     oauth2.setAccessToken("YOUR ACCESS TOKEN");
 
     AccessEvaluationsApi apiInstance = new AccessEvaluationsApi(defaultClient);
+    OffsetDateTime startAt = OffsetDateTime.now(); // OffsetDateTime | Start date from which point to fetch logs.
+    OffsetDateTime endAt = OffsetDateTime.now(); // OffsetDateTime | End date to which point to fetch logs.
     String filter = "filter_example"; // String | Expression to filter the result set. Read more about <see href=\"https://support.lusid.com/filtering-results-from-lusid\"> filtering results from LUSID</see>.
     String sortBy = "sortBy_example"; // String | Order the results by these fields. Use the '-' sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName
     Integer limit = 56; // Integer | When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000.
     String page = "page_example"; // String | Encoded page string returned from a previous search result that will retrieve the next page of data. When this field is supplied, filter and sortby fields should not be supplied.
     String histogramInterval = "histogramInterval_example"; // String | The interval for an included histogram of the logs
     try {
-      ResourceListWithHistogramOfAccessEvaluationLog result = apiInstance.listAccessEvaluationLogs(filter, sortBy, limit, page, histogramInterval);
+      ResourceListWithHistogramOfAccessEvaluationLog result = apiInstance.listAccessEvaluationLogs(startAt, endAt, filter, sortBy, limit, page, histogramInterval);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling AccessEvaluationsApi#listAccessEvaluationLogs");
@@ -124,6 +126,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **startAt** | **OffsetDateTime**| Start date from which point to fetch logs. | [optional]
+ **endAt** | **OffsetDateTime**| End date to which point to fetch logs. | [optional]
  **filter** | **String**| Expression to filter the result set. Read more about &lt;see href&#x3D;\&quot;https://support.lusid.com/filtering-results-from-lusid\&quot;&gt; filtering results from LUSID&lt;/see&gt;. | [optional]
  **sortBy** | **String**| Order the results by these fields. Use the &#39;-&#39; sign to denote descending order e.g. -MyFieldName. Multiple fields can be denoted by a comma e.g. -MyFieldName,AnotherFieldName,-AFurtherFieldName | [optional]
  **limit** | **Integer**| When paginating, only return this number of records. The minimum value is 0 and the maximum is 10000. | [optional]
